@@ -1,0 +1,9 @@
+import pandas as pd
+df = pd.read_excel("Hr attrition analysis")
+
+# Convert to HTML
+html_table = df.to_html(index=False)
+
+# Save as .html file
+with open("output.html", "w", encoding="utf-8") as f:
+    f.write(html_table)
